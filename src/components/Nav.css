@@ -1,0 +1,11 @@
+.nav{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.blacknav{
+    background-color: black;
+}

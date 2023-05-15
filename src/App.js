@@ -1,14 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Row from './Row';
+import Row from './components/Row';
 import requests from './request';
+import Banner from './components/Banner';
+import Nav from './components/Nav';
 
 
 function App() {
   return (
-    <div >
-      <h1>Netflix</h1>      
-      <Row title={'Netflix Originals'} fetchUrl={requests.fetchNetflixOriginals} />
+    <div >    
+      <Nav/>
+      <Banner/>
+      <Row isposter={true} title={'Netflix Originals'} fetchUrl={requests.fetchNetflixOriginals} />
+      <Row title={'Trending'} fetchUrl={requests.fetchTrending} />
+      <Row title={'Top-Rated'} fetchUrl={requests.fetchTopRated} />
+      <Row title={'Romance'} fetchUrl={requests.fetchRomanceMovies} />
+      <Row title={'Action'} fetchUrl={requests.fetchActionMovies} />
+      <Row title={'Comedy'} fetchUrl={requests.fetchComedyMovies} />
+      <Row title={'Horror'} fetchUrl={requests.fetchHorrorMovies} />
+      <Row title={'Documentaries'} fetchUrl={requests.fetchDocumentaries} />
     </div>
   );
 }
